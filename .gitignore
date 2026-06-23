@@ -1,0 +1,18 @@
+output/
+/images/
+.agents/
+.codex/
+server-output.log
+server-error.log
+*.log
+
+# Old generated/placeholder assets kept locally but not needed for deploy.
+assets/images/hero-fitness-team-source.png
+assets/images/hero-fitness-team-v2.png
+assets/images/hero-fitness-team.png
+assets/images/hero-swim-team-source.png
+assets/images/hero-swim-team-v2.png
+assets/images/hero-swim-team.png
+assets/images/trainer-mild.jpg
+assets/images/trainer-numploy.jpg
+assets/images/trainer-pond.jpg
