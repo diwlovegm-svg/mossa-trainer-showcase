@@ -4415,36 +4415,28 @@ body.modal-open {
 }
 
 .hero-team {
-  inset: -10% -10% 0;
+  inset: -18% -20% -8%;
   opacity: 0;
   transform: translateY(18px) scale(0.95);
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    #000 0%,
-    #000 62%,
-    rgba(0, 0, 0, 0.86) 73%,
-    rgba(0, 0, 0, 0.36) 88%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    #000 0%,
-    #000 62%,
-    rgba(0, 0, 0, 0.86) 73%,
-    rgba(0, 0, 0, 0.36) 88%,
-    transparent 100%
-  );
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 .hero-team img {
-  bottom: -35%;
-  width: 140%;
-  height: 135%;
+  bottom: -42%;
+  width: 152%;
+  height: 146%;
   object-position: center top;
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0, 0, 0, 0.9) 82%, rgba(0, 0, 0, 0.35) 93%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0, 0, 0, 0.9) 82%, rgba(0, 0, 0, 0.35) 93%, transparent 100%);
+  -webkit-mask-image: none;
+  mask-image: none;
   filter: none;
   animation: hero-people-float 2.8s ease-in-out infinite;
+}
+
+.hero-team-fitness img {
+  bottom: -50%;
+  width: 172%;
+  height: 164%;
 }
 
 .hero-team-fitness {
