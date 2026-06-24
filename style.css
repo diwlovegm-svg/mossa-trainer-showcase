@@ -4352,41 +4352,33 @@ body.modal-open {
 .hero-team-scene::before {
   position: absolute;
   z-index: -3;
-  top: 12%;
+  top: 19%;
   left: 50%;
-  width: 82%;
+  width: 70%;
   aspect-ratio: 1;
-  background: radial-gradient(circle, rgba(237, 43, 140, 0.22), rgba(124, 57, 216, 0.14) 42%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025) 44%, transparent 72%);
   border-radius: 50%;
-  filter: blur(16px);
+  filter: blur(22px);
   content: "";
   transform: translateX(-50%);
-  animation: hero-aura-pulse 3.8s ease-in-out infinite;
+  animation: none;
 }
 
 .hero-team-scene::after {
   position: absolute;
   z-index: -4;
-  right: 5%;
-  bottom: 4%;
-  left: 5%;
-  height: 38%;
-  background: radial-gradient(ellipse, rgba(255, 107, 32, 0.18), rgba(237, 43, 140, 0.1) 38%, transparent 70%);
-  filter: blur(25px);
+  right: 13%;
+  bottom: 5%;
+  left: 13%;
+  height: 24%;
+  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.36), rgba(255, 255, 255, 0.035) 48%, transparent 72%);
+  filter: blur(18px);
   content: "";
-  animation: hero-glow-breathe 4.4s ease-in-out infinite alternate;
+  animation: none;
 }
 
 .hero-team-orbit {
-  position: absolute;
-  z-index: -2;
-  left: 50%;
-  border: 1px solid rgba(196, 117, 255, 0.28);
-  border-radius: 50%;
-  box-shadow:
-    0 0 30px rgba(124, 57, 216, 0.14),
-    inset 0 0 24px rgba(237, 43, 140, 0.08);
-  transform-origin: center;
+  display: none;
 }
 
 .hero-team-orbit::before,
@@ -4428,15 +4420,7 @@ body.modal-open {
 }
 
 .hero-team-beam {
-  position: absolute;
-  z-index: -2;
-  top: 10%;
-  bottom: 5%;
-  width: 24%;
-  background: linear-gradient(to bottom, transparent, rgba(157, 76, 255, 0.2) 35%, rgba(255, 107, 32, 0.13) 68%, transparent);
-  filter: blur(9px);
-  opacity: 0.7;
-  transform-origin: center bottom;
+  display: none;
 }
 
 .hero-team-beam-one {
@@ -4480,8 +4464,7 @@ body.modal-open {
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0, 0, 0, 0.9) 82%, rgba(0, 0, 0, 0.35) 93%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0, 0, 0, 0.9) 82%, rgba(0, 0, 0, 0.35) 93%, transparent 100%);
   filter:
-    drop-shadow(0 30px 32px rgba(0, 0, 0, 0.42))
-    drop-shadow(0 0 24px rgba(124, 57, 216, 0.25));
+    drop-shadow(0 28px 30px rgba(0, 0, 0, 0.38));
   animation: hero-people-float 2.8s ease-in-out infinite;
 }
 
@@ -4499,17 +4482,14 @@ body.modal-open {
 
 .hero-team-platform {
   z-index: 3;
-  bottom: -6px;
-  width: 88%;
-  height: 128px;
-  background:
-    radial-gradient(ellipse at 27% 35%, rgba(124, 57, 216, 0.44), transparent 46%),
-    radial-gradient(ellipse at 70% 42%, rgba(237, 43, 140, 0.36), transparent 45%),
-    radial-gradient(ellipse at 52% 58%, rgba(255, 107, 32, 0.28), transparent 54%);
-  filter: blur(10px);
+  bottom: 4px;
+  width: 74%;
+  height: 86px;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.10), rgba(0, 0, 0, 0.34) 42%, transparent 72%);
+  filter: blur(8px);
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 64%, transparent 100%);
   mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 64%, transparent 100%);
-  animation: hero-platform-pulse 3.2s ease-in-out infinite;
+  animation: none;
 }
 
 .hero-team-platform::before,
@@ -4523,23 +4503,15 @@ body.modal-open {
 }
 
 .hero-team-platform::before {
-  top: 27px;
-  border-top: 2px solid rgba(237, 43, 140, 0.42);
-  box-shadow: 0 -8px 24px rgba(124, 57, 216, 0.2);
-  transform: rotate(-2deg);
+  display: none;
 }
 
 .hero-team-platform::after {
-  top: 47px;
-  border-top: 2px solid rgba(255, 107, 32, 0.3);
-  transform: rotate(2deg) scaleX(0.92);
+  display: none;
 }
 
 .hero-team-particles {
-  position: absolute;
-  z-index: 4;
-  inset: 0;
-  pointer-events: none;
+  display: none;
 }
 
 .hero-team-particles span {
