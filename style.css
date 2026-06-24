@@ -255,7 +255,7 @@ button {
 
 .hero {
   position: relative;
-  min-height: 760px;
+  min-height: 650px;
   padding: 128px 0 76px;
   overflow: hidden;
   isolation: isolate;
@@ -316,6 +316,7 @@ button {
 .hero-grid {
   display: grid;
   gap: 62px;
+  max-width: 860px;
 }
 
 .eyebrow {
@@ -455,61 +456,6 @@ button {
   line-height: 1.45;
 }
 
-.hero-visual {
-  position: relative;
-  width: min(100%, 420px);
-  min-height: 470px;
-  margin-inline: auto;
-}
-
-.hero-team {
-  position: absolute;
-  z-index: 2;
-  inset: 0;
-  margin: 0;
-  opacity: 0;
-  transform: translateY(15px) scale(0.97);
-  transform-origin: center bottom;
-  will-change: opacity, transform;
-}
-
-.hero-team img {
-  position: absolute;
-  z-index: 1;
-  right: 50%;
-  bottom: -30px;
-  width: 113%;
-  max-width: none;
-  height: 92%;
-  object-fit: contain;
-  object-position: center bottom;
-  filter:
-    drop-shadow(0 26px 28px rgba(0, 0, 0, 0.38))
-    drop-shadow(0 0 22px rgba(124, 57, 216, 0.18));
-  transform: translateX(50%);
-}
-
-.hero-team-fitness {
-  animation: hero-team-fitness-cycle 10s ease-in-out infinite;
-}
-
-.hero-team-swim {
-  animation: hero-team-swim-cycle 10s ease-in-out infinite;
-}
-
-.hero-team-platform {
-  position: absolute;
-  z-index: 1;
-  bottom: 56px;
-  left: 50%;
-  width: 80%;
-  height: 58px;
-  background: radial-gradient(ellipse, rgba(255, 107, 32, 0.34), rgba(124, 57, 216, 0.16) 45%, transparent 72%);
-  border-radius: 50%;
-  filter: blur(5px);
-  transform: translateX(-50%);
-}
-
 .profile-browser {
   padding-bottom: 56px;
   background: #0d0a11;
@@ -642,12 +588,6 @@ button {
   transform: translateY(-7px);
 }
 
-.profile-card.is-hidden,
-.swim-feature.is-hidden,
-[data-profile-section].is-hidden {
-  display: none;
-}
-
 .profile-image {
   position: relative;
   aspect-ratio: 6 / 5;
@@ -737,14 +677,6 @@ button {
   letter-spacing: 0.16em;
 }
 
-.profile-content h3,
-.swim-content h3 {
-  margin: 0;
-  font-size: 30px;
-  letter-spacing: -0.035em;
-  line-height: 1.25;
-}
-
 .profile-match {
   margin: 13px 0 17px;
   color: var(--muted);
@@ -826,86 +758,6 @@ button {
   transform: rotate(8deg);
 }
 
-.swim-section {
-  background:
-    radial-gradient(circle at 0 100%, rgba(72, 216, 229, 0.1), transparent 32%),
-    linear-gradient(180deg, #100d16, #0b0910);
-  border-top: 1px solid var(--line);
-}
-
-.swim-section .eyebrow span {
-  background: linear-gradient(90deg, var(--cyan), var(--purple-bright));
-}
-
-.swim-section .profile-role {
-  color: var(--cyan);
-}
-
-.swim-feature {
-  display: grid;
-  overflow: hidden;
-  background: #15111c;
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  box-shadow: var(--shadow);
-}
-
-.swim-image {
-  position: relative;
-  min-height: 360px;
-  overflow: hidden;
-  background: #14242d;
-}
-
-.swim-image::after {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to top, rgba(7, 12, 16, 0.65), transparent 50%),
-    linear-gradient(130deg, rgba(72, 216, 229, 0.16), transparent 55%);
-  content: "";
-}
-
-.swim-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.swim-badge {
-  position: absolute;
-  z-index: 2;
-  right: 18px;
-  bottom: 18px;
-  display: grid;
-  padding: 12px 16px;
-  background: rgba(7, 12, 16, 0.76);
-  border: 1px solid rgba(72, 216, 229, 0.35);
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-}
-
-.swim-badge strong {
-  color: var(--cyan);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-}
-
-.swim-badge span {
-  color: #b8c9cc;
-  font-size: 9px;
-}
-
-.swim-content {
-  padding: 30px 23px;
-}
-
-.swim-lead {
-  margin: 15px 0 24px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
 .suitable-list {
   display: grid;
   gap: 11px;
@@ -963,94 +815,6 @@ button {
   font-size: 12px;
 }
 
-.course-section {
-  position: relative;
-  overflow: hidden;
-  background: #0a080d;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-.course-glow {
-  position: absolute;
-  top: 0;
-  left: -160px;
-  width: 370px;
-  height: 370px;
-  background: var(--purple);
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.13;
-}
-
-.course-layout {
-  display: grid;
-  gap: 34px;
-}
-
-.course-note {
-  display: flex;
-  max-width: 450px;
-  align-items: flex-start;
-  gap: 11px;
-  margin-top: 25px;
-  padding: 14px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-}
-
-.course-note span {
-  display: grid;
-  flex: 0 0 auto;
-  width: 24px;
-  height: 24px;
-  place-items: center;
-  color: var(--white);
-  background: linear-gradient(135deg, var(--purple), var(--pink));
-  border-radius: 50%;
-  font-size: 11px;
-}
-
-.course-note p {
-  margin: 0;
-  color: #a9a0ae;
-  font-size: 11px;
-}
-
-.price-list {
-  display: grid;
-  gap: 9px;
-}
-
-.price-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.025);
-  border: 1px solid var(--line);
-  border-radius: 13px;
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-}
-
-.price-row:hover {
-  background: rgba(255, 255, 255, 0.045);
-  border-color: rgba(157, 76, 255, 0.32);
-  transform: translateX(4px);
-}
-
-.price-row.featured {
-  background: linear-gradient(100deg, rgba(124, 57, 216, 0.2), rgba(237, 43, 140, 0.11));
-  border-color: rgba(157, 76, 255, 0.35);
-}
-
-.price-row > div {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-}
-
 .price-number {
   display: grid;
   width: 35px;
@@ -1061,22 +825,6 @@ button {
   border-radius: 9px;
   font-size: 10px;
   font-weight: 700;
-}
-
-.price-row p {
-  margin: 0;
-}
-
-.price-row p strong {
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.price-row p small {
-  display: block;
-  color: var(--muted);
-  font-size: 9px;
 }
 
 .price {
@@ -1508,18 +1256,15 @@ button {
   }
 
   .hero {
-    min-height: 800px;
+    min-height: 680px;
     padding: 155px 0 100px;
   }
 
   .hero-grid {
-    grid-template-columns: minmax(0, 1.12fr) minmax(330px, 0.88fr);
+    grid-template-columns: minmax(0, 860px);
     align-items: center;
+    justify-content: center;
     gap: 50px;
-  }
-
-  .hero-visual {
-    min-height: 510px;
   }
 
   .hero-points strong {
@@ -1528,27 +1273,6 @@ button {
 
   .hero-points span {
     font-size: 10px;
-  }
-
-  .swim-feature {
-    grid-template-columns: minmax(300px, 0.88fr) minmax(0, 1.12fr);
-  }
-
-  .swim-image {
-    min-height: 620px;
-  }
-
-  .swim-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 50px;
-  }
-
-  .course-layout {
-    grid-template-columns: minmax(0, 0.83fr) minmax(420px, 1.17fr);
-    align-items: center;
-    gap: 80px;
   }
 
   .pt-layout {
@@ -1594,11 +1318,6 @@ button {
 
 .hero h1 {
   text-shadow: 0 16px 60px rgba(0, 0, 0, 0.35);
-}
-
-.hero-visual {
-  perspective: 1100px;
-  transform-style: preserve-3d;
 }
 
 .carousel-controls > span strong {
@@ -1670,14 +1389,6 @@ button {
     0 34px 85px rgba(0, 0, 0, 0.48),
     0 0 48px rgba(124, 57, 216, 0.24),
     0 0 34px rgba(255, 107, 32, 0.12);
-}
-
-.swim-carousel .carousel-profile-card.is-active {
-  border-color: rgba(72, 216, 229, 0.58);
-  box-shadow:
-    0 34px 85px rgba(0, 0, 0, 0.48),
-    0 0 48px rgba(72, 216, 229, 0.17),
-    0 0 34px rgba(124, 57, 216, 0.16);
 }
 
 .carousel-profile-card:hover,
@@ -1840,15 +1551,6 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-team-fitness {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-
-  .hero-team-swim {
-    display: none;
-  }
 
   .carousel-profile-card {
     transition: border-color 0.01ms, box-shadow 0.01ms;
@@ -1932,10 +1634,6 @@ button {
     font-size: 17px;
   }
 
-  .hero-visual {
-    width: 430px;
-  }
-
   .profile-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
@@ -1997,13 +1695,6 @@ button {
   pointer-events: none;
 }
 
-.swim-select {
-  background:
-    radial-gradient(circle at 78% 20%, rgba(72, 216, 229, 0.17), transparent 30%),
-    radial-gradient(circle at 8% 72%, rgba(124, 57, 216, 0.15), transparent 32%),
-    #080b10;
-}
-
 .roster-count {
   display: none;
   padding: 8px 14px;
@@ -2040,10 +1731,6 @@ button {
   opacity: 0.2;
   content: "";
   pointer-events: none;
-}
-
-.swim-select .character-stage::after {
-  background: linear-gradient(135deg, var(--cyan), var(--purple), var(--pink));
 }
 
 .stage-portrait {
@@ -2116,10 +1803,6 @@ button {
   transform: translateX(-50%);
 }
 
-.swim-select .stage-aura {
-  background: linear-gradient(135deg, var(--cyan), var(--purple), var(--pink));
-}
-
 .stage-code {
   position: absolute;
   z-index: 3;
@@ -2153,10 +1836,6 @@ button {
   letter-spacing: 0.16em;
 }
 
-.swim-select .stage-kicker {
-  color: var(--cyan);
-}
-
 .stage-info h3 {
   margin: 0;
   font-size: clamp(38px, 11vw, 68px);
@@ -2185,12 +1864,6 @@ button {
   border-radius: 6px;
   font-size: 9px;
   font-weight: 600;
-}
-
-.swim-select .stage-tags span {
-  color: #d7faff;
-  background: rgba(72, 216, 229, 0.08);
-  border-color: rgba(72, 216, 229, 0.25);
 }
 
 .stage-stats {
@@ -2233,11 +1906,6 @@ button {
   border-radius: inherit;
   box-shadow: 0 0 14px rgba(237, 43, 140, 0.55);
   content: "";
-}
-
-.swim-stats i::after {
-  background: linear-gradient(90deg, var(--cyan), var(--purple-bright));
-  box-shadow: 0 0 14px rgba(72, 216, 229, 0.5);
 }
 
 .character-roster {
@@ -2326,12 +1994,6 @@ button {
   transform: translateY(-6px);
 }
 
-.swim-select .character-card:hover,
-.swim-select .character-card.selected {
-  border-color: rgba(72, 216, 229, 0.72);
-  box-shadow: 0 14px 38px rgba(27, 144, 168, 0.23);
-}
-
 .character-card.selected::after {
   position: absolute;
   inset: 0;
@@ -2339,10 +2001,6 @@ button {
   border-radius: inherit;
   content: "";
   pointer-events: none;
-}
-
-.swim-select .character-card.selected::after {
-  border-color: var(--cyan);
 }
 
 .character-card.is-hidden {
@@ -2354,10 +2012,6 @@ button {
   aspect-ratio: 3 / 4;
   overflow: hidden;
   background: #0d0912;
-}
-
-.swim-select .character-card-image {
-  aspect-ratio: 1 / 1;
 }
 
 .character-card-image::after {
@@ -2408,10 +2062,6 @@ button {
   letter-spacing: 0.08em;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.swim-select .character-card-copy small {
-  color: var(--cyan);
 }
 
 .character-card-copy strong {
@@ -2506,13 +2156,6 @@ body.modal-open {
     radial-gradient(circle at 82% 12%, rgba(124, 57, 216, 0.16), transparent 30%),
     #09070d;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.swim-carousel {
-  background:
-    radial-gradient(circle at 85% 15%, rgba(72, 216, 229, 0.13), transparent 30%),
-    radial-gradient(circle at 8% 75%, rgba(124, 57, 216, 0.12), transparent 28%),
-    #080b10;
 }
 
 .carousel-section::before {
@@ -2634,15 +2277,6 @@ body.modal-open {
   transform: translateY(-8px);
 }
 
-.swim-carousel .carousel-profile-card:hover,
-.swim-carousel .carousel-profile-card:focus-visible {
-  border-color: rgba(72, 216, 229, 0.55);
-  box-shadow:
-    0 24px 60px rgba(0, 0, 0, 0.38),
-    0 0 35px rgba(72, 216, 229, 0.15),
-    0 0 28px rgba(124, 57, 216, 0.15);
-}
-
 .carousel-profile-card.is-hidden {
   display: none;
 }
@@ -2652,10 +2286,6 @@ body.modal-open {
   aspect-ratio: 4 / 5;
   overflow: hidden;
   background: #110c16;
-}
-
-.swim-carousel .carousel-card-image {
-  aspect-ratio: 1 / 1;
 }
 
 .carousel-card-image::after {
@@ -2732,10 +2362,6 @@ body.modal-open {
   white-space: nowrap;
 }
 
-.swim-carousel .carousel-card-content small {
-  color: var(--cyan);
-}
-
 .carousel-card-content h3 {
   margin: 0;
   font-size: 28px;
@@ -2769,12 +2395,6 @@ body.modal-open {
   border-radius: 5px;
   font-size: 8px;
   font-weight: 600;
-}
-
-.swim-carousel .carousel-card-tags span {
-  color: #d8fbff;
-  background: rgba(72, 216, 229, 0.07);
-  border-color: rgba(72, 216, 229, 0.22);
 }
 
 .view-profile {
@@ -3252,7 +2872,7 @@ body.modal-open {
   }
 }
 
-/* Trainer & Swim Coach Matching Quiz */
+
 .matching-quiz {
   position: relative;
   overflow: hidden;
@@ -4006,18 +3626,8 @@ body.modal-open {
   font-size: 12px;
 }
 
-.course-note p,
-.price-row p small,
-.price {
-  font-size: 13px;
-}
-
 .price-number {
   font-size: 12px;
-}
-
-.price-row p strong {
-  font-size: 15px;
 }
 
 .pt-ring small,
@@ -4181,413 +3791,10 @@ body.modal-open {
   }
 }
 
-/* Separate Fitness Trainer and Swimming Course matching flows. */
-.quiz-type-selector {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 9px;
-  margin-bottom: 24px;
-  padding-bottom: 22px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.quiz-type-button {
-  display: flex;
-  min-width: 0;
-  min-height: 78px;
-  align-items: center;
-  gap: 10px;
-  padding: 11px;
-  color: #aaa1b0;
-  background: rgba(255, 255, 255, 0.025);
-  border: 1px solid rgba(255, 255, 255, 0.11);
-  border-radius: 15px;
-  cursor: pointer;
-  text-align: left;
-  transition:
-    color 0.2s ease,
-    background 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
-}
-
-.quiz-type-button:hover {
-  color: var(--white);
-  border-color: rgba(157, 76, 255, 0.45);
-  transform: translateY(-2px);
-}
-
-.quiz-type-button.active {
-  color: var(--white);
-  background:
-    linear-gradient(135deg, rgba(124, 57, 216, 0.3), rgba(237, 43, 140, 0.16)),
-    rgba(255, 255, 255, 0.035);
-  border-color: rgba(237, 43, 140, 0.65);
-  box-shadow: 0 12px 32px rgba(124, 57, 216, 0.16);
-}
-
-.quiz-type-button[data-matching-type="swim"].active {
-  background:
-    linear-gradient(135deg, rgba(72, 216, 229, 0.2), rgba(124, 57, 216, 0.18)),
-    rgba(255, 255, 255, 0.035);
-  border-color: rgba(72, 216, 229, 0.65);
-  box-shadow: 0 12px 32px rgba(38, 157, 180, 0.14);
-}
-
-.quiz-type-icon {
-  display: grid;
-  width: 36px;
-  height: 36px;
-  flex: 0 0 36px;
-  place-items: center;
-  color: var(--white);
-  background: linear-gradient(135deg, var(--purple), var(--pink), var(--orange));
-  border-radius: 11px;
-  font-size: 17px;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.quiz-type-button[data-matching-type="swim"] .quiz-type-icon {
-  background: linear-gradient(135deg, #138fa8, var(--cyan), var(--purple));
-}
-
-.quiz-type-button > span:last-child {
-  display: grid;
-  min-width: 0;
-}
-
-.quiz-type-button strong {
-  font-size: 13px;
-  line-height: 1.4;
-}
-
-.quiz-type-button small {
-  margin-top: 2px;
-  color: #817888;
-  font-size: 10px;
-  line-height: 1.3;
-}
-
-.quiz-type-button.active small {
-  color: #c8bfcd;
-}
-
-.matching-quiz[data-active-matching-type="swim"] .quiz-goal-chip:hover {
-  border-color: rgba(72, 216, 229, 0.48);
-}
-
-.matching-quiz[data-active-matching-type="swim"] .quiz-goal-chip.selected {
-  background:
-    linear-gradient(135deg, rgba(72, 216, 229, 0.18), rgba(124, 57, 216, 0.2)),
-    rgba(255, 255, 255, 0.035);
-  border-color: rgba(72, 216, 229, 0.62);
-  box-shadow: 0 8px 28px rgba(38, 157, 180, 0.12);
-}
-
-.matching-quiz[data-active-matching-type="swim"] .quiz-goal-chip.selected .quiz-goal-check {
-  background: linear-gradient(135deg, #138fa8, var(--cyan), var(--purple));
-}
-
-.matching-quiz[data-active-matching-type="swim"] .quiz-submit {
-  background: linear-gradient(105deg, #138fa8, var(--cyan) 48%, var(--purple) 120%);
-  box-shadow: 0 12px 34px rgba(38, 157, 180, 0.22);
-}
-
-.matching-quiz[data-active-matching-type="swim"] .matching-result-card.is-best-match {
-  border-color: rgba(72, 216, 229, 0.55);
-  box-shadow:
-    0 24px 64px rgba(0, 0, 0, 0.38),
-    0 0 42px rgba(72, 216, 229, 0.12);
-}
-
-.matching-quiz[data-active-matching-type="swim"] .matching-best-badge,
-.matching-quiz[data-active-matching-type="swim"] .matching-score {
-  background: linear-gradient(135deg, #138fa8, var(--cyan), var(--purple));
-}
-
 @media (max-width: 370px) {
-  .quiz-type-selector {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (min-width: 560px) {
-  .quiz-type-button {
-    min-height: 84px;
-    padding: 14px;
-  }
-
-  .quiz-type-icon {
-    width: 42px;
-    height: 42px;
-    flex-basis: 42px;
-  }
-
-  .quiz-type-button strong {
-    font-size: 15px;
-  }
-
-  .quiz-type-button small {
-    font-size: 12px;
-  }
-}
-
-/* Frameless animated teams in the hero. */
-.hero-visual {
-  width: calc(100% + 24px);
-  min-height: 390px;
-  margin-left: -12px;
-  overflow: hidden;
-}
-
-.hero-team-scene {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.hero-team-scene::before {
-  display: none;
-}
-
-.hero-team-scene::after {
-  display: none;
-}
-
-.hero-team-orbit {
-  display: none;
-}
-
-.hero-team-orbit::before,
-.hero-team-orbit::after {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: var(--orange);
-  border-radius: 50%;
-  box-shadow: 0 0 15px var(--orange);
-  content: "";
-}
-
-.hero-team-orbit::before {
-  top: 8%;
-  left: 18%;
-}
-
-.hero-team-orbit::after {
-  right: 8%;
-  bottom: 22%;
-  background: var(--pink);
-  box-shadow: 0 0 15px var(--pink);
-}
-
-.hero-team-orbit-one {
-  top: 13%;
-  width: 78%;
-  aspect-ratio: 1;
-  animation: hero-orbit-spin 9s linear infinite;
-}
-
-.hero-team-orbit-two {
-  top: 20%;
-  width: 62%;
-  aspect-ratio: 1;
-  border-color: rgba(72, 216, 229, 0.2);
-  animation: hero-orbit-spin-reverse 12s linear infinite;
-}
-
-.hero-team-beam {
-  display: none;
-}
-
-.hero-team-beam-one {
-  left: 21%;
-  animation: hero-beam-sweep-one 4.8s ease-in-out infinite alternate;
-}
-
-.hero-team-beam-two {
-  right: 18%;
-  background: linear-gradient(to bottom, transparent, rgba(72, 216, 229, 0.16) 32%, rgba(237, 43, 140, 0.16) 68%, transparent);
-  animation: hero-beam-sweep-two 5.3s ease-in-out infinite alternate;
-}
-
-.hero-team {
-  inset: -18% -20% -8%;
-  opacity: 0;
-  transform: translateY(18px) scale(0.95);
-  -webkit-mask-image: none;
-  mask-image: none;
-}
-
-.hero-team img {
-  bottom: -42%;
-  width: 152%;
-  height: 146%;
-  object-position: center top;
-  -webkit-mask-image: none;
-  mask-image: none;
-  filter: none;
-  animation: hero-people-float 2.8s ease-in-out infinite;
-}
-
-.hero-team-fitness img {
-  bottom: -50%;
-  width: 172%;
-  height: 164%;
-}
-
-.hero-team-fitness {
-  animation: hero-team-fitness-cycle 9s ease-in-out infinite;
-}
-
-.hero-team-swim {
-  animation: hero-team-swim-cycle 9s ease-in-out infinite;
-}
-
-.hero-team-swim img {
-  animation-delay: -1.8s;
-}
-
-.hero-team-platform {
-  display: none;
-}
-
-.hero-team-platform::before,
-.hero-team-platform::after {
-  position: absolute;
-  right: 3%;
-  left: 3%;
-  height: 34px;
-  border-radius: 50%;
-  content: "";
-}
-
-.hero-team-platform::before {
-  display: none;
-}
-
-.hero-team-platform::after {
-  display: none;
-}
-
-.hero-team-particles {
-  display: none;
-}
-
-.hero-team-particles span {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  color: var(--purple-bright);
-  background: currentColor;
-  border-radius: 50%;
-  box-shadow: 0 0 13px currentColor;
-  opacity: 0;
-  animation: hero-particle-rise 4.5s linear infinite;
-}
-
-.hero-team-particles span:nth-child(1) {
-  bottom: 17%;
-  left: 12%;
-}
-
-.hero-team-particles span:nth-child(2) {
-  bottom: 8%;
-  left: 34%;
-  color: var(--orange);
-  animation-delay: -1.2s;
-}
-
-.hero-team-particles span:nth-child(3) {
-  right: 13%;
-  bottom: 20%;
-  color: var(--pink);
-  animation-delay: -2.3s;
-}
-
-.hero-team-particles span:nth-child(4) {
-  right: 28%;
-  bottom: 7%;
-  color: var(--cyan);
-  animation-delay: -3.1s;
-}
-
-.hero-team-particles span:nth-child(5) {
-  bottom: 28%;
-  left: 4%;
-  color: var(--orange);
-  animation-delay: -3.8s;
-}
-
-@keyframes hero-team-fitness-cycle {
-  0% {
-    opacity: 1;
-    transform: translate3d(-0.6%, 0, 0) scale(1);
-  }
-  40% {
-    opacity: 1;
-    transform: translate3d(0.6%, -10px, 0) scale(1.018);
-  }
-  50%,
-  90% {
-    opacity: 0;
-    transform: translate3d(-1%, 16px, 0) scale(0.96);
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(-0.6%, 0, 0) scale(1);
-  }
-}
-
-@keyframes hero-team-swim-cycle {
-  0%,
-  40% {
-    opacity: 0;
-    transform: translate3d(1%, 16px, 0) scale(0.96);
-  }
-  50% {
-    opacity: 1;
-    transform: translate3d(0.6%, 0, 0) scale(1);
-  }
-  90% {
-    opacity: 1;
-    transform: translate3d(-0.6%, -10px, 0) scale(1.018);
-  }
-  100% {
-    opacity: 0;
-    transform: translate3d(1%, 16px, 0) scale(0.96);
-  }
-}
-
-@keyframes hero-people-float {
-  0%,
-  100% {
-    transform: translateX(50%) translateY(7px) scale(1);
-  }
-  50% {
-    transform: translateX(50%) translateY(-13px) scale(1.012);
-  }
-}
-
-@keyframes hero-orbit-spin {
-  from {
-    transform: translateX(-50%) rotateX(68deg) rotateZ(0deg);
-  }
-  to {
-    transform: translateX(-50%) rotateX(68deg) rotateZ(360deg);
-  }
-}
-
-@keyframes hero-orbit-spin-reverse {
-  from {
-    transform: translateX(-50%) rotateX(72deg) rotateZ(180deg);
-  }
-  to {
-    transform: translateX(-50%) rotateX(72deg) rotateZ(-180deg);
-  }
 }
 
 @keyframes hero-aura-pulse {
@@ -4625,139 +3832,8 @@ body.modal-open {
   }
 }
 
-@keyframes hero-beam-sweep-one {
-  from {
-    opacity: 0.38;
-    transform: rotate(7deg) translateX(-8px);
-  }
-  to {
-    opacity: 0.86;
-    transform: rotate(18deg) translateX(12px);
-  }
-}
-
-@keyframes hero-beam-sweep-two {
-  from {
-    opacity: 0.45;
-    transform: rotate(-7deg) translateX(10px);
-  }
-  to {
-    opacity: 0.82;
-    transform: rotate(-18deg) translateX(-12px);
-  }
-}
-
-@keyframes hero-particle-rise {
-  0% {
-    opacity: 0;
-    transform: translateY(18px) scale(0.6);
-  }
-  22% {
-    opacity: 0.9;
-  }
-  75% {
-    opacity: 0.45;
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-125px) scale(1.2);
-  }
-}
-
 @media (min-width: 800px) {
-  .hero-visual {
-    width: min(112%, 540px);
-    min-height: 510px;
-    margin-left: 0;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-team-fitness {
-    display: block;
-    opacity: 0;
-    animation-name: hero-team-fitness-cycle !important;
-    animation-duration: 12s !important;
-    animation-timing-function: ease-in-out !important;
-    animation-iteration-count: infinite !important;
-  }
-
-  .hero-team-swim {
-    display: block;
-    opacity: 0;
-    animation-name: hero-team-swim-cycle !important;
-    animation-duration: 12s !important;
-    animation-timing-function: ease-in-out !important;
-    animation-iteration-count: infinite !important;
-  }
-
-  .hero-team img {
-    animation-name: hero-people-float !important;
-    animation-duration: 3.8s !important;
-    animation-timing-function: ease-in-out !important;
-    animation-iteration-count: infinite !important;
-  }
-
-  .hero-team-swim img {
-    animation-delay: -1.9s;
-  }
-
-  .hero-team-orbit-one {
-    animation-name: hero-orbit-spin !important;
-    animation-duration: 14s !important;
-    animation-timing-function: linear !important;
-    animation-iteration-count: infinite !important;
-  }
-
-  .hero-team-orbit-two {
-    animation-name: hero-orbit-spin-reverse !important;
-    animation-duration: 17s !important;
-    animation-timing-function: linear !important;
-    animation-iteration-count: infinite !important;
-  }
-
-  .hero-team-beam-one {
-    animation-name: hero-beam-sweep-one !important;
-    animation-duration: 6s !important;
-    animation-timing-function: ease-in-out !important;
-    animation-iteration-count: infinite !important;
-    animation-direction: alternate !important;
-  }
-
-  .hero-team-beam-two {
-    animation-name: hero-beam-sweep-two !important;
-    animation-duration: 6.6s !important;
-    animation-timing-function: ease-in-out !important;
-    animation-iteration-count: infinite !important;
-    animation-direction: alternate !important;
-  }
-
-  .hero-team-platform {
-    animation-name: hero-platform-pulse !important;
-    animation-duration: 4s !important;
-    animation-timing-function: ease-in-out !important;
-    animation-iteration-count: infinite !important;
-  }
-
-  .hero-team-particles span {
-    animation-name: hero-particle-rise !important;
-    animation-duration: 5.5s !important;
-    animation-timing-function: linear !important;
-    animation-iteration-count: infinite !important;
-  }
-
-  .hero-team-scene::before {
-    animation-name: hero-aura-pulse !important;
-    animation-duration: 5s !important;
-    animation-timing-function: ease-in-out !important;
-    animation-iteration-count: infinite !important;
-  }
-
-  .hero-team-scene::after {
-    animation-name: hero-glow-breathe !important;
-    animation-duration: 5.5s !important;
-    animation-timing-function: ease-in-out !important;
-    animation-iteration-count: infinite !important;
-    animation-direction: alternate !important;
-  }
 }

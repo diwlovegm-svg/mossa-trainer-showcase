@@ -79,10 +79,10 @@ const trainers = [
     image: "assets/images/trainer-giew.jpg",
     shortDescription: "เต้นออกกำลังกาย คาร์ดิโอ ลดไขมัน และสร้างความมั่นใจผ่านเสียงเพลง",
     education: "วิทยาศาสตรบัณฑิต สาขาวิทยาศาสตร์การกีฬาและการออกกำลังกาย มหาวิทยาลัยเกษตรศาสตร์",
-    specialties: ["Dance Fitness", "Cardio", "Fat Loss", "Confidence", "Nutrition", "Swimming Fundamentals"],
+    specialties: ["Dance Fitness", "Cardio", "Fat Loss", "Confidence", "Nutrition", "Music Confidence"],
     classes: ["Body Jam Les Mills", "Body Combat Les Mills", "Step Aerobic", "K-Pop Fitness", "Aerobic Dance", "Zumba Basic Step 1", "Urbanize", "Pound Pro"],
-    certificates: "Nutrition Masterclass • อบรมหลักสูตรผู้ฝึกกีฬาว่ายน้ำ Level 1",
-    suitableFor: "ลูกค้าที่ต้องการเต้นออกกำลังกาย คาร์ดิโอ ลดไขมัน ความสนุก เพิ่มความมั่นใจ หรือเรียนว่ายน้ำพื้นฐาน",
+    certificates: "Nutrition Masterclass",
+    suitableFor: "ลูกค้าที่ต้องการเต้นออกกำลังกาย คาร์ดิโอ ลดไขมัน ความสนุก หรือเพิ่มความมั่นใจ",
     filterCategories: ["class", "fatloss"],
   },
   {
@@ -115,228 +115,7 @@ const trainers = [
   },
 ];
 
-const swimCoaches = [
-  {
-    name: "ครูเอ",
-    role: "Beginner Specialist",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-01.jpg",
-    shortDescription: "พื้นฐานว่ายน้ำแบบเป็นขั้นตอนและสร้างความมั่นใจในน้ำ",
-    specialties: ["Beginner", "Confidence", "Foundation"],
-    classes: ["ผู้เริ่มต้น", "ผู้ใหญ่", "พื้นฐาน"],
-    certificates: "การลอยตัว การหายใจ และท่าฟรีสไตล์พื้นฐาน",
-    suitableFor: "ผู้เริ่มต้นและผู้ใหญ่ที่อยากว่ายน้ำเป็น",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูบี",
-    role: "Kids Swim Coach",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-02.jpg",
-    shortDescription: "เรียนสนุก ปลอดภัย และสร้างความคุ้นเคยกับน้ำ",
-    specialties: ["Kids", "Safety", "Fun Learning"],
-    classes: ["เด็ก", "Water Safety", "สนุก"],
-    certificates: "การสอนเด็กเล็กและทักษะความปลอดภัยทางน้ำ",
-    suitableFor: "เด็กที่เริ่มเรียนว่ายน้ำเป็นครั้งแรก",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูซี",
-    role: "Stroke Technique Coach",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-03.jpg",
-    shortDescription: "ปรับรายละเอียดท่าว่ายให้ลื่นไหลและใช้แรงอย่างมีประสิทธิภาพ",
-    specialties: ["Technique", "Efficiency", "Stroke"],
-    classes: ["เทคนิค", "ท่าว่าย", "พัฒนา"],
-    certificates: "Freestyle, Backstroke และ Stroke Correction",
-    suitableFor: "ผู้ที่ว่ายได้แล้วและต้องการพัฒนาเทคนิค",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูดรีม",
-    role: "Confidence Coach",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-04.jpg",
-    shortDescription: "สอนใจเย็น ลดความกลัวน้ำ และค่อย ๆ สร้างความมั่นใจ",
-    specialties: ["Confidence", "Gentle", "Personal"],
-    classes: ["กลัวน้ำ", "ใจเย็น", "พื้นฐาน"],
-    certificates: "Water Confidence และการฝึกแบบรายบุคคล",
-    suitableFor: "เด็กหรือผู้ใหญ่ที่ยังกลัวน้ำ",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูฟิล์ม",
-    role: "Endurance Coach",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-05.jpg",
-    shortDescription: "เพิ่มระยะทาง ความอึด และควบคุมจังหวะหายใจ",
-    specialties: ["Endurance", "Breathing", "Fitness"],
-    classes: ["Endurance", "Breathing", "Fitness"],
-    certificates: "Swim Conditioning และ Endurance Programming",
-    suitableFor: "ผู้ที่ต้องการว่ายเพื่อออกกำลังกายจริงจัง",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูเกรซ",
-    role: "Adult Beginner Coach",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-06.jpg",
-    shortDescription: "เริ่มจากศูนย์แบบส่วนตัวและเป็นระบบ",
-    specialties: ["Adult", "Private", "Foundation"],
-    classes: ["ผู้ใหญ่", "1:1", "มั่นใจ"],
-    certificates: "Adult Learn-to-Swim และ Basic Water Skills",
-    suitableFor: "ผู้ใหญ่ที่ไม่เคยเรียนว่ายน้ำ",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูฮัท",
-    role: "Water Safety Coach",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-07.jpg",
-    shortDescription: "เน้นทักษะเอาตัวรอดและความปลอดภัยในน้ำ",
-    specialties: ["Safety", "Survival", "Family"],
-    classes: ["Safety", "เด็ก", "ครอบครัว"],
-    certificates: "Water Survival, Floating และ Emergency Skills",
-    suitableFor: "ครอบครัวและเด็กที่ต้องการพื้นฐานความปลอดภัย",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูไอซ์",
-    role: "Kids Fun Learning Coach",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-08.jpg",
-    shortDescription: "เรียนรู้ผ่านเกมและกิจกรรมที่เหมาะกับเด็กเล็ก",
-    specialties: ["Kids", "Games", "Development"],
-    classes: ["เด็กเล็ก", "เกม", "พื้นฐาน"],
-    certificates: "Play-based Swimming และ Child Development",
-    suitableFor: "เด็กเล็กที่ต้องการบรรยากาศการเรียนสนุก",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูเจ",
-    role: "Performance Swim Coach",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-09.jpg",
-    shortDescription: "ฝึกจริงจังเพื่อเพิ่มความเร็วและประสิทธิภาพ",
-    specialties: ["Speed", "Performance", "Technique"],
-    classes: ["Speed", "Performance", "Technique"],
-    certificates: "Competitive Technique, Starts และ Turns",
-    suitableFor: "ผู้เรียนที่ต้องการยกระดับความเร็ว",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูขิม",
-    role: "Gentle Coaching Specialist",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-10.jpg",
-    shortDescription: "ดูแลใกล้ชิดและปรับตามจังหวะของผู้เรียน",
-    specialties: ["Gentle", "Personal", "All Ages"],
-    classes: ["ใจเย็น", "ทุกวัย", "ส่วนตัว"],
-    certificates: "Personalized Coaching และ Confidence Building",
-    suitableFor: "ผู้เรียนที่ต้องการความใจเย็นเป็นพิเศษ",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูลีโอ",
-    role: "Fitness Swimming Coach",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-11.jpg",
-    shortDescription: "ใช้การว่ายน้ำเพื่อเพิ่มความแข็งแรงและคาร์ดิโอ",
-    specialties: ["Fitness", "Cardio", "Strength"],
-    classes: ["Fitness", "Cardio", "ผู้ใหญ่"],
-    certificates: "Aquatic Fitness และ Swim Workout Design",
-    suitableFor: "คนที่อยากว่ายน้ำเพื่อสุขภาพ",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูเมย์",
-    role: "Family Swim Coach",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-12.jpg",
-    shortDescription: "เรียนร่วมกันได้ทั้งพี่น้อง เพื่อน และครอบครัว",
-    specialties: ["Family", "Group", "Multi-level"],
-    classes: ["ครอบครัว", "กลุ่ม", "ทุกวัย"],
-    certificates: "Small Group Teaching และ Multi-level Coaching",
-    suitableFor: "ครอบครัวหรือกลุ่มเพื่อนที่อยากเรียนพร้อมกัน",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูนัท",
-    role: "Foundation Coach",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-13.jpg",
-    shortDescription: "ปูพื้นฐานลอยตัว เตะขา และหายใจให้แน่น",
-    specialties: ["Foundation", "Body Position", "Breathing"],
-    classes: ["พื้นฐาน", "ลอยตัว", "หายใจ"],
-    certificates: "Body Position, Kick และ Breathing Control",
-    suitableFor: "ผู้เริ่มต้นที่ต้องการพื้นฐานละเอียด",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูโอ๊ต",
-    role: "Technique Analyst",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-14.jpg",
-    shortDescription: "วิเคราะห์และแก้ท่าว่ายเป็นรายจุด",
-    specialties: ["Analysis", "Correction", "Technique"],
-    classes: ["วิเคราะห์ท่า", "เทคนิค", "พัฒนา"],
-    certificates: "Stroke Analysis และ Individual Correction",
-    suitableFor: "ผู้ที่ติดปัญหาท่าว่ายเฉพาะจุด",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูแพรว",
-    role: "Happy Kids Coach",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-15.jpg",
-    shortDescription: "คลาสเด็กพลังบวก สนุก และมีกำลังใจตลอดการเรียน",
-    specialties: ["Kids", "Motivation", "Energy"],
-    classes: ["เด็ก", "สนุก", "กำลังใจ"],
-    certificates: "Kids Motivation และ Progressive Skill Games",
-    suitableFor: "เด็กที่ชอบการเรียนแบบมีพลัง",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูคิว",
-    role: "Aqua Recovery Coach",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-16.jpg",
-    shortDescription: "เคลื่อนไหวในน้ำอย่างนุ่มนวลและค่อยเป็นค่อยไป",
-    specialties: ["Recovery", "Low Impact", "Mobility"],
-    classes: ["Recovery", "เบาแรง", "Mobility"],
-    certificates: "Low-impact Aquatic Movement และ Mobility",
-    suitableFor: "ผู้ที่อยากเริ่มเคลื่อนไหวแบบแรงกระแทกต่ำ",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูโรส",
-    role: "Stroke Improvement Coach",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-17.jpg",
-    shortDescription: "พัฒนาฟรีสไตล์ กรรเชียง และกบให้ดีขึ้น",
-    specialties: ["Multi-stroke", "Drills", "Improvement"],
-    classes: ["Freestyle", "Backstroke", "Breaststroke"],
-    certificates: "Multi-stroke Development และ Technique Drills",
-    suitableFor: "ผู้เรียนระดับกลางที่อยากพัฒนาหลายท่า",
-    filterCategories: ["swim"],
-  },
-  {
-    name: "ครูสมชาย",
-    role: "Senior Swim Mentor",
-    category: "Swim Coach",
-    image: "assets/images/swim-coach-18.jpg",
-    shortDescription: "ประสบการณ์สูง สอนละเอียดและเป็นระบบ",
-    specialties: ["Experience", "Mentoring", "Long-term"],
-    classes: ["ทุกวัย", "ประสบการณ์", "เป็นระบบ"],
-    certificates: "Fundamentals, Technique และ Long-term Skill Development",
-    suitableFor: "ทุกวัยที่ต้องการครูผู้มีประสบการณ์",
-    filterCategories: ["swim"],
-  },
-];
-
-const profiles = { fitness: trainers, swim: swimCoaches };
-const swimProfilesAreDemo = true;
-
+const profiles = { fitness: trainers };
 function auditProfileContent() {
   const names = new Map();
   trainers.forEach((person) => {
@@ -350,12 +129,6 @@ function auditProfileContent() {
     console.warn(
       "MOSSA content check: พบชื่อจริงซ้ำ กรุณาตรวจสอบก่อนเผยแพร่",
       duplicateNames.map(([fullName, profileNames]) => ({ fullName, profiles: profileNames }))
-    );
-  }
-
-  if (swimProfilesAreDemo) {
-    console.warn(
-      `MOSSA content check: โปรไฟล์ครูว่ายน้ำ ${swimCoaches.length} รายการยังเป็นข้อมูลจำลอง กรุณาเปลี่ยนข้อมูลจริงก่อนเผยแพร่`
     );
   }
 }
@@ -432,83 +205,10 @@ const matchingGoals = [
     english: "Personal Training",
     keywords: ["personal trainer", "personal", "personalized", "1:1", "individual", "วางโปรแกรม"],
   },
-  {
-    id: "kids-learn-swim",
-    type: "swim",
-    label: "เด็กเริ่มเรียนว่ายน้ำ",
-    english: "Kids Learn to Swim",
-    keywords: ["kids", "child", "เด็ก", "play-based", "fun learning", "games", "child development"],
-  },
-  {
-    id: "adult-swim-beginner",
-    type: "swim",
-    label: "ผู้ใหญ่เริ่มเรียนว่ายน้ำ",
-    english: "Adult Beginner",
-    keywords: ["adult", "ผู้ใหญ่", "adult learn-to-swim", "basic water", "foundation", "beginner"],
-  },
-  {
-    id: "water-confidence",
-    type: "swim",
-    label: "ลดความกลัวน้ำและสร้างความมั่นใจ",
-    english: "Water Confidence",
-    keywords: ["confidence", "กลัวน้ำ", "gentle", "ใจเย็น", "confidence building", "มั่นใจ"],
-  },
-  {
-    id: "water-safety",
-    type: "swim",
-    label: "ความปลอดภัยและทักษะเอาตัวรอด",
-    english: "Water Safety & Survival",
-    keywords: ["water safety", "safety", "survival", "emergency", "floating", "เอาตัวรอด"],
-  },
-  {
-    id: "stroke-technique",
-    type: "swim",
-    label: "พัฒนาและแก้เทคนิคท่าว่าย",
-    english: "Stroke Technique",
-    keywords: ["technique", "stroke", "analysis", "correction", "freestyle", "backstroke", "breaststroke", "drills"],
-  },
-  {
-    id: "swim-fitness-endurance",
-    type: "swim",
-    label: "ว่ายเพื่อสุขภาพ คาร์ดิโอ และความอึด",
-    english: "Fitness & Endurance",
-    keywords: ["fitness", "endurance", "conditioning", "cardio", "workout", "breathing"],
-  },
-  {
-    id: "swim-speed-performance",
-    type: "swim",
-    label: "เพิ่มความเร็วและสมรรถภาพการแข่งขัน",
-    english: "Speed & Performance",
-    keywords: ["speed", "performance", "competitive", "starts", "turns"],
-  },
-  {
-    id: "private-swim",
-    type: "swim",
-    label: "เรียนส่วนตัวและแก้เฉพาะจุด",
-    english: "Private Coaching",
-    keywords: ["private", "personal", "1:1", "individual", "personalized", "ส่วนตัว"],
-  },
-  {
-    id: "family-group-swim",
-    type: "swim",
-    label: "เรียนเป็นคู่ กลุ่ม หรือครอบครัว",
-    english: "Family & Group",
-    keywords: ["family", "group", "multi-level", "ครอบครัว", "กลุ่ม", "ทุกวัย", "small group"],
-  },
-  {
-    id: "aqua-recovery",
-    type: "swim",
-    label: "ออกกำลังกายในน้ำแบบแรงกระแทกต่ำ",
-    english: "Aqua Recovery",
-    keywords: ["recovery", "low impact", "low-impact", "mobility", "เบาแรง", "aquatic movement"],
-  },
 ];
 const matchingGoalMap = new Map(matchingGoals.map((goal) => [goal.id, goal]));
-const matchingSelections = {
-  fitness: new Set(),
-  swim: new Set(),
-};
-let activeMatchingType = "fitness";
+const matchingSelections = { fitness: new Set() };
+const activeMatchingType = "fitness";
 const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const primaryNav = document.querySelector(".primary-nav");
@@ -520,7 +220,6 @@ const modalDialog = modal.querySelector(".modal-dialog");
 const yearElement = document.querySelector("#current-year");
 const matchingQuizSection = document.querySelector("#matching-quiz");
 const matchingGoalsContainer = document.querySelector("#matching-goals");
-const matchingTypeButtons = document.querySelectorAll("[data-matching-type]");
 const matchingGoalHeading = document.querySelector("#quiz-goal-heading");
 const matchingSubmitButton = document.querySelector("#run-matching");
 const matchingResetButton = document.querySelector("#reset-matching");
@@ -626,41 +325,10 @@ function updateMatchingSelection() {
     ? `เลือกแล้ว ${selectedGoals.size} เป้าหมาย`
     : "ยังไม่ได้เลือก";
   matchingSubmitButton.disabled = selectedGoals.size === 0;
-  matchingSubmitButton.firstChild.textContent = activeMatchingType === "fitness"
-    ? "ค้นหาเทรนเนอร์ที่เหมาะกับฉัน "
-    : "ค้นหาครูว่ายน้ำที่เหมาะกับฉัน ";
+  matchingSubmitButton.firstChild.textContent = "ค้นหาเทรนเนอร์ที่เหมาะกับฉัน ";
   matchingMessage.textContent = selectedGoals.size
     ? "เลือกได้หลายข้อ ระบบจะหาคนที่ครอบคลุมเป้าหมายของคุณมากที่สุด"
     : "เลือกเป้าหมายที่ต้องการอย่างน้อย 1 ข้อเพื่อเริ่มค้นหา";
-}
-
-function setMatchingType(type) {
-  if (!profiles[type] || type === activeMatchingType) return;
-  activeMatchingType = type;
-  matchingQuizSection.dataset.activeMatchingType = type;
-
-  matchingTypeButtons.forEach((button) => {
-    const active = button.dataset.matchingType === type;
-    button.classList.toggle("active", active);
-    button.setAttribute("aria-pressed", String(active));
-  });
-
-  matchingGoalHeading.textContent = type === "fitness"
-    ? "เป้าหมายด้านฟิตเนสของคุณคืออะไร?"
-    : "คุณกำลังมองหาคอร์สว่ายน้ำแบบไหน?";
-  matchingGoalsContainer.setAttribute(
-    "aria-label",
-    type === "fitness" ? "เลือกเป้าหมายด้านฟิตเนส" : "เลือกเป้าหมายคอร์สว่ายน้ำ"
-  );
-  matchingResultsTitle.textContent = type === "fitness"
-    ? "เทรนเนอร์ที่เราแนะนำสำหรับคุณ"
-    : "ครูว่ายน้ำที่เราแนะนำสำหรับคุณ";
-
-  renderMatchingGoals();
-  updateMatchingSelection();
-  matchingResults.hidden = true;
-  matchingResultsGrid.replaceChildren();
-  matchingSummary.textContent = "";
 }
 
 function getMatchingProfiles() {
@@ -751,7 +419,7 @@ function createMatchingResultCard(profile, rank) {
   const recommendation = rank === 0
     ? '<span class="matching-best-badge">แนะนำที่สุด</span>'
     : `<span class="matching-rank">อันดับ ${rank + 1}</span>`;
-  const profileType = profile.type === "fitness" ? "FITNESS TRAINER" : "SWIM COACH";
+  const profileType = "FITNESS TRAINER";
 
   return `
     <article class="matching-result-card${rank === 0 ? " is-best-match" : ""}" style="--result-delay: ${rank * 55}ms">
@@ -1103,9 +771,6 @@ updateMatchingSelection();
 renderProfiles();
 document.querySelectorAll(".profile-carousel").forEach(setupShowcase);
 
-matchingTypeButtons.forEach((button) => {
-  button.addEventListener("click", () => setMatchingType(button.dataset.matchingType));
-});
 
 matchingGoalsContainer.addEventListener("click", (event) => {
   const button = event.target.closest("[data-matching-goal]");
@@ -1214,7 +879,6 @@ const filterLabels = {
   strength: "สายเวท / Strength",
   class: "สายคลาส",
   fatloss: "สายลดไขมัน",
-  swim: "ครูว่ายน้ำ",
 };
 
 function applyProfileFilter(filter) {
@@ -1252,9 +916,7 @@ filterButtons.forEach((button) => {
     button.setAttribute("aria-pressed", "true");
     applyProfileFilter(button.dataset.filter);
 
-    const targetSection = button.dataset.filter === "swim"
-      ? document.querySelector("#swim-coaches")
-      : document.querySelector("#fitness-trainers");
+    const targetSection = document.querySelector("#fitness-trainers");
     requestAnimationFrame(() => targetSection.scrollIntoView({ behavior: "smooth", block: "start" }));
   });
 });
