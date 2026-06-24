@@ -4350,31 +4350,11 @@ body.modal-open {
 }
 
 .hero-team-scene::before {
-  position: absolute;
-  z-index: -3;
-  top: 19%;
-  left: 50%;
-  width: 70%;
-  aspect-ratio: 1;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025) 44%, transparent 72%);
-  border-radius: 50%;
-  filter: blur(22px);
-  content: "";
-  transform: translateX(-50%);
-  animation: none;
+  display: none;
 }
 
 .hero-team-scene::after {
-  position: absolute;
-  z-index: -4;
-  right: 13%;
-  bottom: 5%;
-  left: 13%;
-  height: 24%;
-  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.36), rgba(255, 255, 255, 0.035) 48%, transparent 72%);
-  filter: blur(18px);
-  content: "";
-  animation: none;
+  display: none;
 }
 
 .hero-team-orbit {
@@ -4463,8 +4443,7 @@ body.modal-open {
   object-position: center top;
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0, 0, 0, 0.9) 82%, rgba(0, 0, 0, 0.35) 93%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0, 0, 0, 0.9) 82%, rgba(0, 0, 0, 0.35) 93%, transparent 100%);
-  filter:
-    drop-shadow(0 28px 30px rgba(0, 0, 0, 0.38));
+  filter: none;
   animation: hero-people-float 2.8s ease-in-out infinite;
 }
 
@@ -4481,15 +4460,7 @@ body.modal-open {
 }
 
 .hero-team-platform {
-  z-index: 3;
-  bottom: 4px;
-  width: 74%;
-  height: 86px;
-  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.10), rgba(0, 0, 0, 0.34) 42%, transparent 72%);
-  filter: blur(8px);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 64%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 64%, transparent 100%);
-  animation: none;
+  display: none;
 }
 
 .hero-team-platform::before,
